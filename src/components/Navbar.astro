@@ -1,6 +1,14 @@
 ---
-// Change these before publishing:
-// TODO: tempLogo should be company's logo
+//////////////////////////////////////////////
+// Change these before publishing:          //
+// TODO: tempLogo should be company's logo  //
+// TODO: Set links to site's actual pages   //
+//                                          //
+//////////////////////////////////////////////
+
+// Things to do before calling it done:
+// TODO: Make navbar disappear when scrolling down and then reappear when scrolling back up
+// TODO: Use variables for colors and sizes
 
 // Asset Imports
 import tempLogo from "../assets/images/logoipsum-332.svg";
@@ -8,17 +16,37 @@ import tempLogo from "../assets/images/logoipsum-332.svg";
 
 <nav>
   <a id="logo" href="/"><img src={tempLogo.src} alt="A temporary logo" /></a>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/">About</a></li>
-  </ul>
+  <div id="link-container">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">About</a></li>
+      <li><a href="/">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <style>
   nav {
     display: flex;
     flex-direction: row;
-    background-color: #333;
+    background-color: #616161;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  #logo {
+    margin: 10px;
+  }
+
+  #link-container {
+    width: 100%;
+    position: relative;
+    right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
   }
 
   ul {
@@ -36,12 +64,12 @@ import tempLogo from "../assets/images/logoipsum-332.svg";
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 22px 16px;
     text-decoration: none;
+    font-size: larger;
   }
 
-  /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #111;
+    background-color: #272727;
   }
 </style>
