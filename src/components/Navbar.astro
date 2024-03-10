@@ -1,0 +1,47 @@
+---
+// Change these before publishing:
+// TODO: tempLogo should be company's logo
+
+// Asset Imports
+import tempLogo from "../assets/images/logoipsum-332.svg";
+---
+
+<nav>
+  <a id="logo" href="/"><img src={tempLogo.src} alt="A temporary logo" /></a>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">About</a></li>
+  </ul>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+</style>
