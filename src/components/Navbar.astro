@@ -12,6 +12,8 @@
 
 // Asset Imports
 import tempLogo from "../assets/images/logoipsum-332.svg";
+
+// https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
 ---
 
 <nav>
@@ -25,6 +27,8 @@ import tempLogo from "../assets/images/logoipsum-332.svg";
   </div>
 </nav>
 
+<!-- Could probably style this a little better -->
+
 <style>
   nav {
     display: flex;
@@ -34,6 +38,7 @@ import tempLogo from "../assets/images/logoipsum-332.svg";
     width: 100%;
     top: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: top 0.3s;
   }
 
   #logo {
