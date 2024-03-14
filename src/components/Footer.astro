@@ -1,5 +1,9 @@
 ---
-
+//////////////////////////////////////////////
+// Change these before publishing:          //
+// TODO: Add company name to copyright      //
+//                                          //
+//////////////////////////////////////////////
 ---
 
 <footer>
@@ -10,8 +14,18 @@
       <li><a href="/">Contact</a></li>
     </ul>
   </div>
-  <div class="copyright"></div>
+  <div class="copyright-container">
+    <small>
+      Copyright &copy; <span id="copyright"></span> | All rights reserved
+    </small>
+  </div>
 </footer>
+
+<script>
+  document.querySelector("#copyright").textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
 
 <style>
   footer {
@@ -48,4 +62,9 @@
 
   li a:hover {
     background-color: #272727;
+  }
+
+  .copyright-container {
+    text-align: center;
+  }
 </style>
