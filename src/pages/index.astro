@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import favicon from "../assets/images/favicon.svg";
 
 // TODO: get favicon working
+// TODO: add hero section
 ---
 
 <html lang="en">
@@ -16,15 +17,19 @@ import favicon from "../assets/images/favicon.svg";
   </head>
   <body>
     <Navbar />
-    <h1>Basic Site Template</h1>
-    <Footer />
+    <div class="hero-section">
+      <h1>Basic Site Template</h1>
+    </div>
+    <Footer id="footer" />
   </body>
 </html>
 
 <style>
   body {
     margin: 0;
+  }
+
+  .hero-section {
     height: 100dvh;
-    border: 1px solid red;
   }
 </style>
