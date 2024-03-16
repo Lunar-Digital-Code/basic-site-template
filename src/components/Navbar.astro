@@ -27,6 +27,21 @@ import tempLogo from "../assets/images/logoipsum-332.svg";
   </div>
 </nav>
 
+<script>
+  // show / hide navbar when scrolling down and up
+  let lastScrollTop;
+  const navbar = document.querySelector("nav");
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = "-80px";
+    } else {
+      navbar.style.top = "0";
+    }
+    lastScrollTop = scrollTop;
+  });
+</script>
+
 <!-- Could probably style this a little better -->
 
 <style>

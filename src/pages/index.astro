@@ -4,7 +4,6 @@ import Footer from "../components/Footer.astro";
 import favicon from "../assets/images/favicon.svg";
 
 // TODO: get favicon working
-// TODO: add hero section
 ---
 
 <html lang="en">
@@ -27,9 +26,21 @@ import favicon from "../assets/images/favicon.svg";
 <style>
   body {
     margin: 0;
+    background: rgb(143, 143, 143);
+    background: radial-gradient(
+      circle,
+      rgba(143, 143, 143, 1) 0%,
+      rgba(82, 82, 82, 1) 35%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 
   .hero-section {
-    height: 100dvh;
+    height: 90dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: larger;
   }
 </style>
