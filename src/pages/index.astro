@@ -1,41 +1,15 @@
 ---
 //layout import
 import MainLayout from "../layouts/MainLayout.astro";
+import TempLayout from "../layouts/TempLayout.astro";
 
 const pageTitle = "Home Page";
 
 // TODO: get favicon working
 // TODO: make entire site responsive
 // TODO: style footer better and add a thing to the right maybe
-// TODO: make a basic layout for the site
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <div class="hero-section">
-    <h1>Basic Site Template</h1>
-    <h2>{pageTitle}</h2>
-  </div>
+  <TempLayout pageTitle={pageTitle} />
 </MainLayout>
-
-<style>
-  body {
-    margin: 0;
-    background: rgb(143, 143, 143);
-    background: radial-gradient(
-      circle,
-      rgba(143, 143, 143, 1) 0%,
-      rgba(82, 82, 82, 1) 35%,
-      rgba(0, 0, 0, 1) 100%
-    );
-  }
-
-  .hero-section {
-    height: 90dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: larger;
-  }
-</style>

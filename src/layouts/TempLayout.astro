@@ -1,17 +1,16 @@
 ---
-// layout import
-import MainLayout from "../layouts/MainLayout.astro";
+export interface Props {
+  pageTitle: string;
+}
 
-const pageTitle = "404 Page";
+const { pageTitle } = Astro.props;
 ---
 
-<MainLayout pageTitle={pageTitle}>
-  <div class="hero-section">
-    <h1>Basic Site Template</h1>
-    <h2>{pageTitle}</h2>
-    <a href="/">Go Home</a>
-  </div>
-</MainLayout>
+<div class="hero-section">
+  <h1>Basic Site Template</h1>
+  <h2>{pageTitle}</h2>
+  <slot />
+</div>
 
 <style>
   body {
